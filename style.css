@@ -97,24 +97,45 @@ button:hover {
     width: 20px;
     height: 20px;
     background-color: red;
-    clip-path: polygon(50% 0%, 100% 30%, 80% 100%, 50% 75%, 20% 100%, 0% 30%);
+    transform: rotate(-45deg);
     animation: floatUp 5s linear infinite;
     opacity: 0.7;
 }
 
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -10px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: 10px;
+}
+
 @keyframes floatUp {
     0% {
-        transform: translateY(0);
+        transform: translateY(0) rotate(-45deg);
         opacity: 0.7;
     }
     50% {
         opacity: 1;
     }
     100% {
-        transform: translateY(-100vh);
+        transform: translateY(-100vh) rotate(-45deg);
         opacity: 0;
     }
 }
+
 
 /* Animated Images */
 .gallery {
