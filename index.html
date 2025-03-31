@@ -49,5 +49,24 @@
             }, 4000);
         });
     </script>
+    <div id="heart-container"></div>
+
+    <script>
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = Math.random() * 2 + 3 + "s"; // Random speed
+    
+            document.getElementById("heart-container").appendChild(heart);
+    
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+    
+        setInterval(createHeart, 500); // Creates a heart every 0.5s
+    </script>
+    
 </body>
 </html>
