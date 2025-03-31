@@ -8,24 +8,46 @@
     
 </head>
 <body>
-    <script defer src="script.js"></script>
     <audio id="bg-music" loop>
-        <source src="music.mp3" type="audio/mp3">
+        <source src="music.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-    
-    <div class="container">
-        <h1>To My Love ❤️</h1>
-        <p>You are the best thing that has ever happened to me. No matter how far apart we are, my love for you only grows stronger. 💖</p>
-        <button id="playMusic">Click to Play Music</button>
+
+    <button id="open-letter">Tap to Open 💌</button>
+
+    <div class="letter" id="love-letter">
+        <h1>My Love ❤️,</h1>
+        <p>From the very first moment we met, you became the most beautiful part of my life. 🌸 Every day, every night, no matter how far we are, you are always in my heart 💕, my thoughts, and my dreams. I find myself looking at your pictures before I sleep 😴, not just because I miss you, but because seeing your face brings me peace—it reminds me that love this deep, this true, is worth every second of waiting. ⏳❤️</p>
+        <p>Distance may separate us physically, but in every moment, my heart reaches for you. 💞 No matter the situation, no matter what we go through, I want you to know that I will always be here. In your happiest days, I will be by your side, celebrating every joy with you. 🎉 In your hardest times, I will hold you even tighter 🤗, reminding you that you are never alone. Even in the moments we disagree, my love for you never wavers—because no matter what, you are the one I choose, always. 💖</p>
+        <p>I am doing everything I can to meet you soon because I cannot wait to hold you in my arms 🤗, to see your smile in person 😊, to feel the warmth of your hand in mine. 🤝 And when that moment comes, I don’t ever want to let go. Because, my love, I don’t just want a few stolen moments with you—I want forever. ♾️❤️</p>
+        <p>So, here I am, with all my heart ❤️, all my love 💕, asking you one simple question: <strong>Will you be mine? 💍 Not just for now, not just for the next few years, but for a lifetime? 🥰</strong> Because you are my once-in-a-lifetime, my forever, my always. 💖</p>
+        <p>I love you more than words can ever say, and I will love you for all the days of my life. 💞</p>
+        <p class="signature">Yours, always and forever, ❤️<br>[Your Name]</p>
     </div>
 
-    <div class="hearts"></div>
-
-    <div class="gallery">
-        <img class="animated-img" src="image1.jpg" alt="Our Memories">
-        <img class="animated-img" src="image2.jpg" alt="Best Moments">
-        <img class="animated-img" src="image3.jpg" alt="Forever Together">
+    <div class="image-container">
+        <img src="image1.jpg" class="hidden-img">
+        <img src="image2.jpg" class="hidden-img">
+        <img src="image3.jpg" class="hidden-img">
     </div>
+
+    <script>
+        document.getElementById("open-letter").addEventListener("click", function () {
+            document.getElementById("love-letter").style.display = "block";
+            setTimeout(() => {
+                document.getElementById("love-letter").style.opacity = "1";
+            }, 100);
+            document.getElementById("bg-music").play();
+            this.style.display = "none";
+
+            setTimeout(() => {
+                document.querySelectorAll(".hidden-img").forEach((img, index) => {
+                    setTimeout(() => {
+                        img.classList.add("fade-in");
+                    }, index * 1000);
+                });
+            }, 4000);
+        });
+    </script>
 </body>
 </html>

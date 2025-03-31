@@ -7,6 +7,61 @@ body {
     margin: 0;
     padding: 0;
 }
+body {
+    font-family: 'Georgia', serif;
+    background-color: #ffe6e6;
+    color: #333;
+    text-align: center;
+    padding: 50px;
+}
+
+.letter {
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    display: none;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+#open-letter {
+    background: pink;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#open-letter:hover {
+    background: red;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.hidden-img {
+    width: 300px;
+    height: auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.hidden-img.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 /* Music Button */
 button {
