@@ -168,7 +168,6 @@ button:hover {
 }
 
 /*i love you */
-
 .love-text {
     font-size: 60px;
     font-weight: bold;
@@ -179,7 +178,8 @@ button:hover {
     transform: translateY(50px);
     transition: opacity 1.5s ease-out, transform 1.5s ease-out;
     margin-top: 50px;
-    visibility: hidden; /* Ensures it's hidden at start */
+    visibility: hidden;
+    animation: glow 2s infinite alternate, heartbeat 1.5s infinite;
 }
 
 .show-love {

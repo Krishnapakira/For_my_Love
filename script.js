@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const loveText = document.querySelector(".love-text");
 
     function showLoveText() {
+        if (!loveText) return; // Ensure element exists
         const position = loveText.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
 
@@ -68,3 +69,4 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", showLoveText);
     showLoveText(); // Run once on load
 });
+
