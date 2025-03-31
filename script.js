@@ -36,3 +36,20 @@ window.addEventListener("scroll", function () {
         }
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll(".animated-image");
+
+    function checkScroll() {
+        images.forEach((img) => {
+            const position = img.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            
+            if (position < windowHeight - 100) {
+                img.classList.add("visible");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", checkScroll);
+    checkScroll(); // Run on page load
+});
