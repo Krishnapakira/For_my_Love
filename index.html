@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For My Love ❤️</title>
     <link rel="stylesheet" href="style.css">
+<<<<<<< HEAD
     <style>
         body {
             text-align: center;
@@ -86,6 +87,9 @@
             }
         }
     </style>
+=======
+    
+>>>>>>> parent of 66dcba1 (Update index.html)
 </head>
 <body>
     <audio id="bg-music" loop>
@@ -97,7 +101,11 @@
 
     <div class="letter" id="love-letter">
         <h1>My Love ❤️,</h1>
-        <p>From the very first moment we met, you became the most beautiful part of my life...</p>
+        <p>From the very first moment we met, you became the most beautiful part of my life. 🌸 Every day, every night, no matter how far we are, you are always in my heart 💕, my thoughts, and my dreams. I find myself looking at your pictures before I sleep 😴, not just because I miss you, but because seeing your face brings me peace—it reminds me that love this deep, this true, is worth every second of waiting. ⏳❤️</p>
+        <p>Distance may separate us physically, but in every moment, my heart reaches for you. 💞 No matter the situation, no matter what we go through, I want you to know that I will always be here. In your happiest days, I will be by your side, celebrating every joy with you. 🎉 In your hardest times, I will hold you even tighter 🤗, reminding you that you are never alone. Even in the moments we disagree, my love for you never wavers—because no matter what, you are the one I choose, always. 💖</p>
+        <p>I am doing everything I can to meet you soon because I cannot wait to hold you in my arms 🤗, to see your smile in person 😊, to feel the warmth of your hand in mine. 🤝 And when that moment comes, I don’t ever want to let go. Because, my love, I don’t just want a few stolen moments with you—I want forever. ♾️❤️</p>
+        <p>So, here I am, with all my heart ❤️, all my love 💕, asking you one simple question: <strong>Will you be mine? 💍 Not just for now, not just for the next few years, but for a lifetime? 🥰</strong> Because you are my once-in-a-lifetime, my forever, my always. 💖</p>
+        <p>I love you more than words can ever say, and I will love you for all the days of my life. 💞</p>
         <p class="signature">Yours, always and forever, ❤️<br>your sona </p>
     </div>
 
@@ -105,10 +113,14 @@
         <img src="image1.jpg" class="hidden-img">
         <img src="image2.jpg" class="hidden-img">
         <img src="image3.jpg" class="hidden-img">
+        <img src="image4.jpg" class="hidden-img">
+        <img src="image5.jpg" class="hidden-img">
+        <img src="image6.jpg" class="hidden-img">
+        <img src="image7.jpg" class="hidden-img">
+        <img src="image8.jpg" class="hidden-img">
+        <img src="image9.jpg" class="hidden-img">
+        <img src="image10.jpg" class="hidden-img">
     </div>
-
-    <div id="heart-container"></div>
-    <h1 class="love-text" id="love-text">I LOVE YOU ❤️</h1>
 
     <script>
         document.getElementById("open-letter").addEventListener("click", function () {
@@ -126,23 +138,29 @@
                     }, index * 1000);
                 });
             }, 4000);
-
-            setTimeout(() => {
-                document.getElementById("love-text").classList.add("show-love");
-            }, 8000);
         });
-
-        function createHeart() {
-            const heart = document.createElement("div");
-            heart.classList.add("heart");
-            heart.style.left = Math.random() * 100 + "vw";
-            heart.style.animationDuration = Math.random() * 2 + 3 + "s";
-            document.getElementById("heart-container").appendChild(heart);
-            setTimeout(() => {
-                heart.remove();
-            }, 5000);
-        }
-        setInterval(createHeart, 500);
     </script>
+   <div id="heart-container"></div>
+
+   <script>
+       function createHeart() {
+           const heart = document.createElement("div");
+           heart.classList.add("heart");
+           heart.style.left = Math.random() * 100 + "vw"; // Random horizontal position
+           heart.style.animationDuration = Math.random() * 2 + 3 + "s"; // Random speed
+   
+           document.getElementById("heart-container").appendChild(heart);
+   
+           setTimeout(() => {
+               heart.remove();
+           }, 5000);
+       }
+   
+       setInterval(createHeart, 500); // Create a heart every 0.5 seconds
+   </script>
+   <h1 class="love-text">I LOVE YOU 💖</h1>
+
+   
+    
 </body>
 </html>
