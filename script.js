@@ -8,9 +8,9 @@ function createHeart() {
     const heart = document.createElement("div");
     heart.classList.add("heart");
 
-    // Set random position across the whole screen
-    heart.style.left = Math.random() * 100 + "vw";  // Random horizontal (left)
-    heart.style.top = Math.random() * 100 + "vh";   // Random vertical (top)
+    // Set random position across the full screen
+    heart.style.left = Math.random() * 100 + "vw";  // Random X position
+    heart.style.top = "100vh"; // Start from the bottom of the screen
 
     heart.style.animationDuration = Math.random() * 3 + 2 + "s"; // Random speed
 
