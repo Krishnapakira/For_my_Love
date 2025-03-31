@@ -81,7 +81,7 @@ button:hover {
 }
 
 /* Floating Hearts Animation */
-.hearts {
+#heart-container  {
     position: fixed;
     top: 0;
     left: 0;
