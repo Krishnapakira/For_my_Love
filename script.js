@@ -53,3 +53,18 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", checkScroll);
     checkScroll(); // Run on page load
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const loveText = document.querySelector(".love-text");
+
+    function showLoveText() {
+        const position = loveText.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (position < windowHeight - 100) {
+            loveText.classList.add("show-love");
+        }
+    }
+
+    window.addEventListener("scroll", showLoveText);
+    showLoveText(); // Trigger once in case it's already in view
+});

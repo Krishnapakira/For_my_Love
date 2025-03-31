@@ -166,14 +166,24 @@ button:hover {
     opacity: 1;
     transform: translateY(0);
 }
+
+/*i love you */
 .love-text {
-    font-size: 50px;
+    font-size: 60px;
     font-weight: bold;
     text-align: center;
     color: #ff3366;
     text-shadow: 0 0 10px #ff3366, 0 0 20px #ff6699, 0 0 30px #ff99cc;
     animation: glow 2s infinite alternate, heartbeat 1.5s infinite;
     margin-top: 50px;
+    opacity: 0; /* Hidden initially */
+    transform: translateY(50px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.show-love {
+    opacity: 1; /* Make visible */
+    transform: translateY(0);
 }
 
 @keyframes glow {
