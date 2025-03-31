@@ -66,5 +66,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     window.addEventListener("scroll", showLoveText);
-    showLoveText(); // Trigger once in case it's already in view
+    showLoveText(); // Run once on load
 });
